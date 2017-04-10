@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-xs-12
+      .h1
+        Room Index
+  .row
+    .col-xs-12
+      = link_to 'New Room', new_room_path, class: 'btn btn-default'
+  .row
+    .col-xs-12.rooms__container
+      %ul
+        = render partial: 'room', collection: @rooms

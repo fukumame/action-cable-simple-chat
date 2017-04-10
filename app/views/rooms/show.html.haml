@@ -1,0 +1,14 @@
+.container
+  .row
+    .col-xs-12
+      .h1
+        Room: #{@room.name}
+  .row
+    .col-xs-12#messages
+      = render partial: 'messages/message', collection: @room.messages
+  .row
+    .col-xs-12
+      %form
+        %label Say something:
+        %br
+        %input#message-input{:type => "text"}
