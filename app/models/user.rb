@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  validates :nickname, presence: true
   has_many :joined_rooms, dependent: :destroy
   has_many :rooms, through: :joined_rooms
   has_many :messages, dependent: :destroy
